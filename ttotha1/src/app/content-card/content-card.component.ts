@@ -11,6 +11,7 @@ export class ContentCardComponent {
   @Input() stuff: Content;
   @Input() index: number;
   @Input() last: boolean;
+  @Input() type: string;
 
   constructor() {
   }

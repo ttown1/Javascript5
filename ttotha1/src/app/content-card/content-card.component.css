@@ -1,9 +1,8 @@
 div.content-card {
     border-style: solid;
     border-width: 5px;
-    height: 300px;
+    height: 350px;
     line-height: 12px;
-    border-color: aquamarine;
 }
 
 div.content-card img {
@@ -12,5 +11,12 @@ div.content-card img {
 
 div.content-card.last {
     border-width: 3px;
-    border-color: greenyellow;
+}
+
+div.content-card.news {
+    border-color: green;
+}
+
+div.content-card.story {
+    border-color: blue;
 }
