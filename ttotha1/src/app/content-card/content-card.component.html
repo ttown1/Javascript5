@@ -1,5 +1,14 @@
-<div class="content-card" [ngClass]="{'last': last}">
-    <img src="{{stuff.imgUrl}}" alt="{{stuff.body}}" (click)="clicked()">
+<div class="content-card" [ngClass]="{'last': last, 'news': type=='news', 'story': type=='story'} ">
+    <p appTextDeco [deco] = '"underline"'>
+        {{ stuff.title }}
+    </p>
+    <div *ngIf='stuff.imgUrl'>
+        <img src="{{stuff.imgUrl}}" alt="{{stuff.body}}" (click)="clicked()">
+    </div>
+    <div *ngIf='!stuff.imgUrl'>
+        <img src='https://static.thenounproject.com/png/78777-200.png' alt="Default image">
+    </div>
+
     <p class="body">
         {{stuff.body}}
     </p>
@@ -15,7 +24,7 @@
     <p>
         {{stuff.type}}
     </p>
-    <p>
+    <p appTextDeco [deco] = '"line-through"'>
         {{stuff.tags}}
     </p>
 </div>
